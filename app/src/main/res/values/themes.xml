@@ -13,5 +13,18 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="fontFamily">@font/comicneue_regular</item>
+
+<!--        <item name="android:windowIsTranslucent">true</item>-->
+<!--        <item name="android:windowBackground">@android:color/transparent</item>-->
     </style>
+
+    <!-- Customize your Toolbar here -->
+    <style name="MyToolbar" parent="Theme.MaterialComponents" >
+
+        <item name="fontFamily">@font/comicneue_bold</item>
+        <item name="android:textSize">32sp</item>
+
+
+    </style>
+
 </resources>
