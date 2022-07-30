@@ -22,7 +22,7 @@
     <style name="MyToolbar" parent="Theme.MaterialComponents" >
 
         <item name="fontFamily">@font/comicneue_bold</item>
-        <item name="android:textSize">32sp</item>
+        <item name="android:textSize">26sp</item>
 
 
     </style>

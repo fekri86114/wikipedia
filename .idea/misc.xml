@@ -3,7 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Klap.ir/Documents/android/AndroidProject/wikipedia2/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Klap.ir/Documents/android/AndroidProject/wikipedia2/app/src/main/res/drawable/ic_explore.xml" value="0.184" />
+        <entry key="..\:/Users/Klap.ir/Documents/android/AndroidProject/wikipedia2/app/src/main/res/drawable/ic_photographer.xml" value="0.184" />
+        <entry key="..\:/Users/Klap.ir/Documents/android/AndroidProject/wikipedia2/app/src/main/res/drawable/ic_video_maker.xml" value="0.184" />
+        <entry key="..\:/Users/Klap.ir/Documents/android/AndroidProject/wikipedia2/app/src/main/res/drawable/ic_wikimedia.xml" value="0.184" />
+        <entry key="..\:/Users/Klap.ir/Documents/android/AndroidProject/wikipedia2/app/src/main/res/drawable/ic_wikipedia.xml" value="0.184" />
+        <entry key="..\:/Users/Klap.ir/Documents/android/AndroidProject/wikipedia2/app/src/main/res/drawable/ic_wikipedia_icon.xml" value="0.184" />
+        <entry key="..\:/Users/Klap.ir/Documents/android/AndroidProject/wikipedia2/app/src/main/res/drawable/ic_writer.xml" value="0.184" />
+        <entry key="..\:/Users/Klap.ir/Documents/android/AndroidProject/wikipedia2/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Klap.ir/Documents/android/AndroidProject/wikipedia2/app/src/main/res/layout/header_layout.xml" value="0.5" />
+        <entry key="..\:/Users/Klap.ir/Documents/android/AndroidProject/wikipedia2/app/src/main/res/menu/menu_drawer.xml" value="0.33" />
       </map>
     </option>
   </component>
