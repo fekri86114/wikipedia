@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.app.wikipedia.databinding.ItemTrendBinding
 import com.app.wikipedia.ux.data.ItemPost
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterInside
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 
 class TrendAdapter( private val data: ArrayList<ItemPost> ) :
     RecyclerView.Adapter<TrendAdapter.TrendViewHolder>() {
@@ -19,6 +21,7 @@ class TrendAdapter( private val data: ArrayList<ItemPost> ) :
             val glide = Glide
                 .with( itemView.context )
                 .load( itemPost.imgUrl )
+                .transform(CenterInside(), RoundedCorners(16))
                 .into( binding.imgTrendMain )
 
             binding.txtTrendTitle.text = itemPost.txtTitle
