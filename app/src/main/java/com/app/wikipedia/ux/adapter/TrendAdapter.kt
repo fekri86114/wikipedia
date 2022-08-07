@@ -18,10 +18,10 @@ class TrendAdapter( private val data: ArrayList<ItemPost> ) :
 
         fun bindViews( itemPost: ItemPost ) {
 
-            val glide = Glide
+            Glide
                 .with( itemView.context )
                 .load( itemPost.imgUrl )
-                .transform(CenterInside(), RoundedCorners(16))
+                .transform(CenterInside(), RoundedCorners(32))
                 .into( binding.imgTrendMain )
 
             binding.txtTrendTitle.text = itemPost.txtTitle
