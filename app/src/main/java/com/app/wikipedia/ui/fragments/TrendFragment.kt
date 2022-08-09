@@ -1,5 +1,6 @@
 package com.app.wikipedia.ui.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,11 +8,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.app.wikipedia.ui.activity.MainActivity2
 import com.app.wikipedia.databinding.FragmentTrendBinding
 import com.app.wikipedia.ux.adapter.TrendAdapter
 import com.app.wikipedia.ux.data.ItemPost
+import com.app.wikipedia.ux.interfaces.ItemEvents
 
-class TrendFragment : Fragment() {
+class TrendFragment : Fragment(), ItemEvents {
     lateinit var binding: FragmentTrendBinding
 
     override fun onCreateView(
@@ -159,10 +162,19 @@ class TrendFragment : Fragment() {
 
         )
 
-        val myAdapter = TrendAdapter(dataTrend)
+        val myAdapter = TrendAdapter(dataTrend, this)
 
-        binding.recyclerviewTrend.layoutManager = LinearLayoutManager( view.context, RecyclerView.VERTICAL, false )
+        binding.recyclerviewTrend.layoutManager =
+            LinearLayoutManager(view.context, RecyclerView.VERTICAL, false)
         binding.recyclerviewTrend.adapter = myAdapter
+
+    }
+
+    override fun onItemClicked(itemPost: ItemPost) {
+
+        val intent = Intent(activity, MainActivity2::class.java)
+        intent.putExtra( SEND_DATA_TO_SECOND_ACTIVITY, itemPost )
+        startActivity(intent)
 
     }
 
