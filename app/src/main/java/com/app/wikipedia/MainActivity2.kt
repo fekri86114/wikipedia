@@ -24,6 +24,12 @@ class MainActivity2 : AppCompatActivity() {
         supportActionBar!!.setHomeButtonEnabled( true )
         supportActionBar!!.setDisplayHomeAsUpEnabled( true )
 
+        binding.extendedFabMain.setOnClickListener {
+
+            // open website
+
+        }
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
