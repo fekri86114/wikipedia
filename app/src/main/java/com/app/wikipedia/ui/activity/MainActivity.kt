@@ -1,15 +1,15 @@
 package com.app.wikipedia.ui.activity
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
+import cn.pedant.SweetAlert.SweetAlertDialog
 import com.app.wikipedia.R
 import com.app.wikipedia.databinding.ActivityMainBinding
-import com.app.wikipedia.databinding.FragmentExploreBinding
 import com.app.wikipedia.ui.fragments.ExploreFragment
 import com.app.wikipedia.ui.fragments.ProfileFragment
 import com.app.wikipedia.ui.fragments.TrendFragment
@@ -39,38 +39,50 @@ class MainActivity : AppCompatActivity() {
 
                 //upstairs (Navigation drawer) -->
                 R.id.menu_writer -> {
-
-                    Toast.makeText(this, "menu_writer clicked!", Toast.LENGTH_SHORT).show()
-
                     // set close drawer from left to right -->
                     binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
 
+                    val dialog = SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
+
+                    dialog.titleText = "Alert!"
+                    dialog.confirmText = "Confirm"
+                    dialog.cancelText = "Cancel"
+                    dialog.contentText = "Wanna be a writer?"
+
+                    dialog.setConfirmClickListener {
+                        dialog.dismiss()
+                    }
+
+                    dialog.setCancelClickListener {
+
+                        dialog.dismiss()
+                        Toast.makeText(this, "Confirmed!! You can be a writer!", Toast.LENGTH_SHORT)
+                            .show()
+
+                    }
+
                 }
+
                 R.id.menu_photographer -> {
-                    Toast.makeText(this, "menu_photographer clicked!", Toast.LENGTH_SHORT).show()
+                    binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
+
                 }
+
                 R.id.menu_video_maker -> {
-
-                    Toast.makeText(this, "menu_video_maker  clicked!", Toast.LENGTH_SHORT).show()
-
+                    binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
                 }
+
                 R.id.menu_translater -> {
-
-                    Toast.makeText(this, "menu_translater clicked!", Toast.LENGTH_SHORT).show()
-
+                    binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
                 }
 
                 // downstairs (Navigation drawer) -->
 
                 R.id.menu_open_wikipedia -> {
-
-                    Toast.makeText(this, "menu_open_wikipedia clicked!", Toast.LENGTH_SHORT).show()
-
+                    binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
                 }
                 R.id.menu_open_wikimedia -> {
-
-                    Toast.makeText(this, "menu_open_wikimedia clicked!", Toast.LENGTH_SHORT).show()
-
+                    binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
                 }
 
             }
@@ -105,7 +117,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // set reselected to navigation. it doesn't let the application get any errors :-) you shouldn't give anything to this
-        binding.bottomNavigationMain.setOnItemReselectedListener { }
+        binding.bottomNavigationMain.setOnItemReselectedListener {  }
     }
 
     fun replaceFragment(fragment: Fragment) {
