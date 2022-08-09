@@ -19,9 +19,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate( layoutInflater )
-        setContentView( binding.root )
-        setSupportActionBar( binding.toolbarMain ) // add actionbar
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        setSupportActionBar(binding.toolbarMain) // add actionbar
 
         val actionBarDrawerToggle = ActionBarDrawerToggle(
             this,
@@ -30,12 +30,12 @@ class MainActivity : AppCompatActivity() {
             R.string.open_drawer,
             R.string.close_drawer
         )
-        binding.drawerLayoutMain.addDrawerListener( actionBarDrawerToggle )
+        binding.drawerLayoutMain.addDrawerListener(actionBarDrawerToggle)
         actionBarDrawerToggle.syncState()
 
         binding.navigationDrawerMain.setNavigationItemSelectedListener {
 
-            when ( it.itemId ) {
+            when (it.itemId) {
 
                 //upstairs (Navigation drawer) -->
                 R.id.menu_writer -> {
@@ -82,21 +82,21 @@ class MainActivity : AppCompatActivity() {
 
         binding.bottomNavigationMain.setOnItemSelectedListener {
 
-            when ( it.itemId ) {
+            when (it.itemId) {
 
                 R.id.menu_explore -> {
-                    replaceFragment( ExploreFragment() )
+                    replaceFragment(ExploreFragment())
 
-                    var badge = binding.bottomNavigationMain.getOrCreateBadge(R.id.menu_explore)
-                    badge.isVisible = true
-                    badge.number = 122
-
+                    //set badge
+//                    var badge = binding.bottomNavigationMain.getOrCreateBadge(R.id.menu_explore)
+//                    badge.isVisible = true
+//                    badge.number = 122
                 }
                 R.id.menu_profile -> {
-                    replaceFragment( ProfileFragment() )
+                    replaceFragment(ProfileFragment())
                 }
                 R.id.menu_trend -> {
-                    replaceFragment( TrendFragment() )
+                    replaceFragment(TrendFragment())
                 }
 
             }
@@ -105,23 +105,19 @@ class MainActivity : AppCompatActivity() {
         }
 
         // set reselected to navigation. it doesn't let the application get any errors :-) you shouldn't give anything to this
-        binding.bottomNavigationMain.setOnItemReselectedListener {  }
-
+        binding.bottomNavigationMain.setOnItemReselectedListener { }
     }
 
-    fun replaceFragment( fragment: Fragment ) {
-
+    fun replaceFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace( R.id.frame_main_container, fragment )
+        transaction.replace(R.id.frame_main_container, fragment)
         transaction.commit()
-
     }
 
     fun firstRun() {
-
-        replaceFragment( ExploreFragment() )
-        binding.bottomNavigationMain.selectedItemId = R.id.menu_explore // set selected an item in bottom navigation
-
+        replaceFragment(ExploreFragment())
+        binding.bottomNavigationMain.selectedItemId =
+            R.id.menu_explore // set selected an item in bottom navigation
     }
 
 }

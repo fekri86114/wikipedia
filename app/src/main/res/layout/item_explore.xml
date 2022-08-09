@@ -35,7 +35,8 @@
                 android:id="@+id/txt_explore_title"
                 android:textSize="30sp"
                 android:textColor="@color/light_black"
-                android:text="@string/taylor_swift"/>
+                android:text="@string/taylor_swift"
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="wrap_content"

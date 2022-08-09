@@ -6,9 +6,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.app.wikipedia.databinding.ItemExploreBinding
 import com.app.wikipedia.ux.data.ItemPost
+import com.app.wikipedia.ux.interfaces.ItemEvents
 import com.bumptech.glide.Glide
 
-class ExploreAdapter(private val data: ArrayList<ItemPost>) :
+class ExploreAdapter(private val data: ArrayList<ItemPost>, val itemEvents: ItemEvents) :
     RecyclerView.Adapter<ExploreAdapter.ExploreViewHolder>() {
     lateinit var binding: ItemExploreBinding
 
@@ -24,6 +25,12 @@ class ExploreAdapter(private val data: ArrayList<ItemPost>) :
             binding.txtExploreTitle.text = itemPost.txtTitle
             binding.txtExploreSubtitle.text = itemPost.txtSubtitle
             binding.txtExploreDetail.text = itemPost.txtDetail
+
+            itemView.setOnClickListener {
+
+                itemEvents.onItemClicked( itemPost )
+
+            }
 
         }
 
