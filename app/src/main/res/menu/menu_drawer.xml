@@ -19,7 +19,7 @@
     <item
         android:id="@+id/menu_translater"
         android:icon="@drawable/ic_translate"
-        android:title="Be a translater"/>
+        android:title="Be a translater" />
 
     <item
          android:title="Our websites">
@@ -29,12 +29,12 @@
             <item
                 android:id="@+id/menu_open_wikipedia"
                 android:icon="@drawable/ic_wikipedia"
-                android:title="Visit Wikipedia" />
+                android:title="Visit Wikipedia"/>
 
             <item
                 android:id="@+id/menu_open_wikimedia"
                 android:icon="@drawable/ic_wikimedia"
-                android:title="Visit Wikimedia" />
+                android:title="Visit Wikimedia"/>
 
         </menu>
 

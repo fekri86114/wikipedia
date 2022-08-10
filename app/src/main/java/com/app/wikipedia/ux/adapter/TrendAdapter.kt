@@ -11,39 +11,39 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterInside
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 
-class TrendAdapter(private val data: ArrayList<ItemPost>, val itemEvents: ItemEvents) :
+class TrendAdapter( private val data: ArrayList<ItemPost>, val itemEvents: ItemEvents ) :
     RecyclerView.Adapter<TrendAdapter.TrendViewHolder>() {
     lateinit var binding: ItemTrendBinding
 
-    inner class TrendViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class TrendViewHolder( itemView: View ) : RecyclerView.ViewHolder( itemView ) {
 
-        fun bindViews(itemPost: ItemPost) {
+        fun bindViews( itemPost: ItemPost ) {
 
             Glide
-                .with(itemView.context)
-                .load(itemPost.imgUrl)
-                .transform(CenterInside(), RoundedCorners(32))
-                .into(binding.imgTrendMain)
+                .with( itemView.context )
+                .load( itemPost.imgUrl )
+                .transform( CenterInside(), RoundedCorners( 16) )
+                .into( binding.imgTrendMain )
 
             binding.txtTrendTitle.text = itemPost.txtTitle
             binding.txtTrendSubtitle.text = itemPost.txtSubtitle
             binding.txtTrendInsight.text = itemPost.insight
-            binding.txtTrendPageNumber.text = (adapterPosition + 1).toString()
+            binding.txtTrendPageNumber.text = ( adapterPosition + 1 ).toString()
 
             itemView.setOnClickListener {
-                itemEvents.onItemClicked(itemPost)
+                itemEvents.onItemClicked( itemPost )
             }
 
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TrendViewHolder {
-        binding = ItemTrendBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return TrendViewHolder(binding.root)
+    override fun onCreateViewHolder( parent: ViewGroup, viewType: Int ): TrendViewHolder {
+        binding = ItemTrendBinding.inflate( LayoutInflater.from( parent.context ), parent, false )
+        return TrendViewHolder( binding.root )
     }
 
-    override fun onBindViewHolder(holder: TrendViewHolder, position: Int) {
-        holder.bindViews(data[position])
+    override fun onBindViewHolder( holder: TrendViewHolder, position: Int ) {
+        holder.bindViews( data[position] )
     }
 
     override fun getItemCount(): Int {
