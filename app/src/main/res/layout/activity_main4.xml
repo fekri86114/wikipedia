@@ -4,46 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp"
+    android:orientation="horizontal"
     tools:context=".ui.activity.MainActivity4">
 
-    <com.google.android.material.chip.Chip
-        android:id="@+id/chip_android"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Android"
-        android:textSize="18sp"
-        app:chipIcon="@android:mipmap/sym_def_app_icon"
-        android:checkable="true"
-        app:iconStartPadding="8dp"
-        app:iconEndPadding="8dp"/>
+    <HorizontalScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <com.google.android.material.chip.Chip
-        android:id="@+id/chip_web"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Web"
-        android:textSize="18sp"
-        app:chipIcon="@drawable/ic_writer"
-        android:checkable="true"
-        app:iconStartPadding="8dp"
-        app:iconEndPadding="8dp"/>
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:singleSelection="true"
+            app:singleLine="true"
+            android:id="@+id/chip_group_main">
 
-    <com.google.android.material.chip.Chip
-        android:id="@+id/chip_machine"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Machine"
-        android:textSize="18sp"
-        app:chipIcon="@drawable/ic_explore"
-        app:chipIconTint="@color/black"
-        android:checkable="true"
-        app:iconStartPadding="8dp"
-        app:iconEndPadding="8dp"/>
 
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:checkable="true"
+                android:text="Android"
+                android:textSize="18sp"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                app:iconStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_web"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:checkable="true"
+                android:text="Web"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:textSize="18sp"
+                app:iconEndPadding="8dp"
+                app:iconStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_machine"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Python"
+                android:textSize="18sp"
+                app:iconEndPadding="8dp"
+                app:iconStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_backend_java"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Java"
+                android:textSize="18sp"
+                app:iconEndPadding="8dp"
+                app:iconStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_front_css"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="CSS"
+                android:textSize="18sp"
+                app:iconEndPadding="8dp"
+                app:iconStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_front_html"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Html"
+                android:textSize="18sp"
+                app:iconEndPadding="8dp"
+                app:iconStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_backend_carbon"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Carbon"
+                android:textSize="18sp"
+                app:iconEndPadding="8dp"
+                app:iconStartPadding="8dp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
 
 </LinearLayout>

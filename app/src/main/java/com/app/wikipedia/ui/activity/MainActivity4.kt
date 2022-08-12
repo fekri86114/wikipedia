@@ -3,6 +3,7 @@ package com.app.wikipedia.ui.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.app.wikipedia.R
 import com.app.wikipedia.databinding.ActivityMain4Binding
 
 class MainActivity4 : AppCompatActivity() {
@@ -13,13 +14,33 @@ class MainActivity4 : AppCompatActivity() {
         binding = ActivityMain4Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.chipAndroid.setOnClickListener {
+//        binding.chipMachine.setOnCheckedChangeListener { buttonView, isChecked ->
+//
+//            if (isChecked) {
+//
+//                Toast.makeText(this, "Chip is checked!", Toast.LENGTH_SHORT).show()
+//
+//            } else {
+//
+//                Toast.makeText(this, "Chip is not checked!", Toast.LENGTH_SHORT).show()
+//
+//            }
+//
+//        }
 
-            Toast.makeText(this, "Android", Toast.LENGTH_SHORT).show()
+        binding.chipGroupMain.setOnCheckedChangeListener { group, checkedIds -> // used it for understand witch of them is using.
+
+            when ( checkedIds ) {
+
+                R.id.chip_android -> {
+
+                    Toast.makeText(this, "Android Checked!", Toast.LENGTH_SHORT).show()
+
+                }
+
+            }
 
         }
 
-
     }
 }
-// work with chip / 14:11

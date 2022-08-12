@@ -154,21 +154,21 @@ class MainActivity : AppCompatActivity() {
         binding.navigationDrawerMain.menu.getItem(1).isChecked = false
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate( R.menu.menu_main, menu )
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        
+
         when (item.itemId) {
-            
+
             R.id.menu_exit -> {
-               onBackPressed() // close app
+                onBackPressed() // close app
             }
-            
+
         }
-        
+
         return true
     }
 
