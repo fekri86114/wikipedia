@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".ui.activity.MainActivity4">
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Android"
+        android:textSize="18sp"
+        app:chipIcon="@android:mipmap/sym_def_app_icon"
+        android:checkable="true"
+        app:iconStartPadding="8dp"
+        app:iconEndPadding="8dp"/>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Web"
+        android:textSize="18sp"
+        app:chipIcon="@drawable/ic_writer"
+        android:checkable="true"
+        app:iconStartPadding="8dp"
+        app:iconEndPadding="8dp"/>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_machine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Machine"
+        android:textSize="18sp"
+        app:chipIcon="@drawable/ic_explore"
+        app:chipIconTint="@color/black"
+        android:checkable="true"
+        app:iconStartPadding="8dp"
+        app:iconEndPadding="8dp"/>
+
+
+</LinearLayout>
