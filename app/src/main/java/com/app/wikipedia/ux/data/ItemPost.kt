@@ -13,5 +13,6 @@ data class ItemPost(
 
     // for trend fragment -->
     val isTrend: Boolean,
-    val insight: String
+    val insight: String,
+    val itemLink: String
 ): Parcelable

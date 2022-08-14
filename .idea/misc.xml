@@ -27,7 +27,21 @@
         <entry key="..\:/Users/Klap.ir/Documents/android/AndroidProject/wikipedia2/app/src/main/res/layout/item_trend.xml" value="0.33" />
         <entry key="..\:/Users/Klap.ir/Documents/android/AndroidProject/wikipedia2/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/Klap.ir/Documents/android/AndroidProject/wikipedia2/app/src/main/res/menu/menu_drawer.xml" value="0.33" />
+        <entry key="..\:/Users/user/Documents/android/AndroidProject/Wikipedia/app/src/main/res/drawable/ic_call.xml" value="0.145" />
+        <entry key="..\:/Users/user/Documents/android/AndroidProject/Wikipedia/app/src/main/res/drawable/ic_error.xml" value="0.145" />
+        <entry key="..\:/Users/user/Documents/android/AndroidProject/Wikipedia/app/src/main/res/drawable/ic_message.xml" value="0.145" />
+        <entry key="..\:/Users/user/Documents/android/AndroidProject/Wikipedia/app/src/main/res/drawable/ic_more.xml" value="0.145" />
+        <entry key="..\:/Users/user/Documents/android/AndroidProject/Wikipedia/app/src/main/res/drawable/ic_search.xml" value="0.1545" />
+        <entry key="..\:/Users/user/Documents/android/AndroidProject/Wikipedia/app/src/main/res/drawable/shape_circle.xml" value="0.1545" />
+        <entry key="..\:/Users/user/Documents/android/AndroidProject/Wikipedia/app/src/main/res/drawable/shapte_circle.xml" value="0.145" />
+        <entry key="..\:/Users/user/Documents/android/AndroidProject/Wikipedia/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Users/user/Documents/android/AndroidProject/Wikipedia/app/src/main/res/layout/activity_main2.xml" value="0.1962962962962963" />
+        <entry key="..\:/Users/user/Documents/android/AndroidProject/Wikipedia/app/src/main/res/layout/activity_main3.xml" value="0.2" />
         <entry key="..\:/Users/user/Documents/android/AndroidProject/Wikipedia/app/src/main/res/layout/activity_main4.xml" value="0.264" />
+        <entry key="..\:/Users/user/Documents/android/AndroidProject/Wikipedia/app/src/main/res/layout/fragment_explore.xml" value="0.264" />
+        <entry key="..\:/Users/user/Documents/android/AndroidProject/Wikipedia/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
+        <entry key="..\:/Users/user/Documents/android/AndroidProject/Wikipedia/app/src/main/res/layout/fragment_test.xml" value="0.19290263876251137" />
+        <entry key="..\:/Users/user/Documents/android/AndroidProject/Wikipedia/app/src/main/res/mipmap-anydpi-v26/ic_launcher_wikipedia_round.xml" value="0.1615" />
       </map>
     </option>
   </component>

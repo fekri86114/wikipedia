@@ -2,6 +2,7 @@ package com.app.wikipedia.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.app.wikipedia.R
 import com.app.wikipedia.databinding.ActivityMain3Binding
 import com.bumptech.glide.Glide
 
@@ -13,7 +14,7 @@ class MainActivity3 : AppCompatActivity() {
         binding = ActivityMain3Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val imgUrl = "https://www.mountainphotography.com/images/xl/20130728-Memminger-Sunset.jpg"
+        val imgUrl = R.drawable.img_translatore
 
         Glide
             .with(this)

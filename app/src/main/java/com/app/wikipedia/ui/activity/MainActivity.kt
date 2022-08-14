@@ -68,8 +68,8 @@ class MainActivity : AppCompatActivity() {
                     binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
 
                     Snackbar.make(binding.root, "You create your videos.", Snackbar.LENGTH_LONG)
-                        .setAction("Retry!") {
-                            Toast.makeText(this, "Checking network...", Toast.LENGTH_SHORT).show()
+                        .setAction("Go!") {
+                            Toast.makeText(this, "Please, wait. Checking network...", Toast.LENGTH_SHORT).show()
                         }
                         .setActionTextColor(ContextCompat.getColor(this, R.color.white))
                         .setBackgroundTint(ContextCompat.getColor(this, R.color.blue))
@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.menu_open_wikimedia -> {
                     binding.drawerLayoutMain.closeDrawer(GravityCompat.START)
-                    openWebsite("https://www.wikimedia.or")
+                    openWebsite("https://www.wikimedia.org/")
                 }
 
             }

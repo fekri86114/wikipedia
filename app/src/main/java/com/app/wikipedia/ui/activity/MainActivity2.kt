@@ -47,7 +47,7 @@ class MainActivity2 : AppCompatActivity() {
         binding.fabDetailOpenWikipedia.setOnClickListener {
 
             // open website
-            val url = "https://en.wikipedia.org/wiki/Main_Page"
+            val url = itemPost.itemLink
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
 
             startActivity(intent)
